@@ -5,6 +5,7 @@ import entity.enums.Gender;
 import entity.enums.Race;
 import lombok.Builder;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -18,28 +19,29 @@ public record Npc(
         Race race,
         Gender gender,
         CharacterClass characterClass,
-        Integer level,
-        Integer experience,
+        int level,
+        int experience,
 
-        Integer strength,
-        Integer intelligence,
-        Integer willpower,
-        Integer agility,
-        Integer speed,
-        Integer endurance,
-        Integer personality,
-        Integer luck,
+        int strength,
+        int intelligence,
+        int willpower,
+        int agility,
+        int speed,
+        int endurance,
+        int personality,
+        int luck,
 
-        Integer health,
-        Integer healthMax,
-        Integer magicka,
-        Integer magickaMax,
-        Integer stamina,
-        Integer staminaMax,
+        int health,
+        int healthMax,
+        int magicka,
+        int magickaMax,
+        int stamina,
+        int staminaMax,
 
         Map<String, Integer> skills,
         List<String> spells,
         List<String> perks,
         List<String> inventory,
-        Integer gold
-) {}
+        int gold
+) implements Serializable {
+}
