@@ -1,0 +1,8 @@
+package entity.enums;
+
+public enum CharacterClass {
+    WARRIOR, MAGE, THIEF, ASSASSIN, BARD,
+    BARBARIAN, BATTLEMAGE, HEALER, KNIGHT,
+    NIGHTBLADE, ROGUE, SORCERER, SPY,
+    SCOUT, CRUSADER, COMMONER, NOBLE
+}
