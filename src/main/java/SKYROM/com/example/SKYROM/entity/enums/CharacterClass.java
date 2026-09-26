@@ -1,4 +1,4 @@
-package entity.enums;
+package SKYROM.com.example.SKYROM.entity.enums;
 
 public enum CharacterClass {
     WARRIOR, MAGE, THIEF, ASSASSIN, BARD,

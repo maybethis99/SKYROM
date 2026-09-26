@@ -1,15 +1,15 @@
-package utils;
-
-import com.github.javafaker.Faker;
-import entity.DTO.Npc;
-import entity.enums.CharacterClass;
-import entity.enums.Gender;
-import entity.enums.Race;
+package SKYROM.com.example.SKYROM.utils;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
+
+import com.github.javafaker.Faker;
+
+import SKYROM.com.example.SKYROM.entity.DTO.Npc;
+import SKYROM.com.example.SKYROM.entity.enums.CharacterClass;
+import SKYROM.com.example.SKYROM.entity.enums.Gender;
+import SKYROM.com.example.SKYROM.entity.enums.Race;
 
 public class NpcFactory {
 
@@ -74,7 +74,6 @@ public class NpcFactory {
         int gold = faker.number().numberBetween(0, 10_000);
 
         return Npc.builder()
-                .id(UUID.randomUUID())
                 .name(name)
                 .title(title)
                 .race(race)

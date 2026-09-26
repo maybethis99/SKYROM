@@ -1,10 +1,14 @@
-package entity.entities;
+package SKYROM.com.example.SKYROM.entity.entities;
 
-import entity.enums.CharacterClass;
-import entity.enums.Gender;
-import entity.enums.Race;
+import SKYROM.com.example.SKYROM.entity.enums.CharacterClass;
+import SKYROM.com.example.SKYROM.entity.enums.Gender;
+import SKYROM.com.example.SKYROM.entity.enums.Race;
 import jakarta.persistence.*;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import java.io.Serializable;
 import java.util.List;
@@ -13,10 +17,13 @@ import java.util.UUID;
 
 @Entity
 @NoArgsConstructor
+@Table(name = "npc")
+@Getter
+@Setter
 public class NpcEntity implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     private String name;
@@ -52,13 +59,13 @@ public class NpcEntity implements Serializable {
     private int staminaMax;
     private int gold;
 
-    @OneToMany(orphanRemoval = true, mappedBy = "npc")
+    @JdbcTypeCode(SqlTypes.JSON)
     private Map<String, Integer> skills;
-    @OneToMany(orphanRemoval = true, mappedBy = "npc")
+    @JdbcTypeCode(SqlTypes.JSON)
     private List<String> spells;
-    @OneToMany(orphanRemoval = true, mappedBy = "npc")
+    @JdbcTypeCode(SqlTypes.JSON)
     private List<String> perks;
-    @OneToMany(orphanRemoval = true, mappedBy = "npc")
+    @JdbcTypeCode(SqlTypes.JSON)
     private List<String> inventory;
 
 

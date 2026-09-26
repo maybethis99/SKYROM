@@ -1,4 +1,4 @@
-package entity.enums;
+package SKYROM.com.example.SKYROM.entity.enums;
 
 public enum Race {
     NORD, IMPERIAL, BRETON, REDGUARD,       // люди

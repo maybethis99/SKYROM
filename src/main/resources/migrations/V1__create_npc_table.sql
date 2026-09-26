@@ -58,7 +58,7 @@ CREATE TABLE npc
 
     CONSTRAINT chk_npc_health_max  CHECK (health_max  >= 0),
     CONSTRAINT chk_npc_magicka_max CHECK (magicka_max >= 0),
-    CONSTRAINT chk_npc_stamina_max CHECK (stamina_max >= 0),
+    CONSTRAINT chk_npc_stamina_max CHECK (stamina_max >= 0)
 
 );
 
