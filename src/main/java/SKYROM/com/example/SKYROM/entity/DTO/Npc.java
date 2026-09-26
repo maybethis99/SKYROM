@@ -1,8 +1,8 @@
-package entity.DTO;
+package SKYROM.com.example.SKYROM.entity.DTO;
 
-import entity.enums.CharacterClass;
-import entity.enums.Gender;
-import entity.enums.Race;
+import SKYROM.com.example.SKYROM.entity.enums.CharacterClass;
+import SKYROM.com.example.SKYROM.entity.enums.Gender;
+import SKYROM.com.example.SKYROM.entity.enums.Race;
 import lombok.Builder;
 
 import java.io.Serializable;

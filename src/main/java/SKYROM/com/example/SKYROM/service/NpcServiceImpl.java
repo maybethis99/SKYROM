@@ -1,29 +1,27 @@
-package service;
+package SKYROM.com.example.SKYROM.service;
 
-import entity.DTO.Npc;
-import entity.DTO.NpcSearchDto;
-import entity.response.ApiResponse;
-import entity.response.PaginationResponse;
+import SKYROM.com.example.SKYROM.entity.DTO.Npc;
+import SKYROM.com.example.SKYROM.entity.DTO.NpcSearchDto;
+import SKYROM.com.example.SKYROM.entity.response.ApiResponse;
+import SKYROM.com.example.SKYROM.entity.response.PaginationResponse;
 import lombok.RequiredArgsConstructor;
-import mappers.NpcMapper;
+import SKYROM.com.example.SKYROM.mappers.NpcMapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import repository.NpcRepository;
-import utils.NpcFactory;
-
-import java.util.List;
+import SKYROM.com.example.SKYROM.repository.NpcRepository;
+import SKYROM.com.example.SKYROM.utils.NpcFactory;
 
 @Service
 @RequiredArgsConstructor
-public class NpcServiceImpl implements Npcservice{
+public class NpcServiceImpl implements Npcservice {
 
     private final NpcRepository npcRepository;
     private final NpcMapper npcMapper;
 
     @Override
     public ApiResponse<PaginationResponse<NpcSearchDto>> findAll(Pageable pageable) {
-        Page<NpcSearchDto> npcs = npcRepository.findAllByDeletedFalse(pageable).map(npcMapper::toSearchDto);
+        Page<NpcSearchDto> npcs = npcRepository.findAll(pageable).map(npcMapper::toSearchDto);
 
         return ApiResponse.ok(new PaginationResponse<>(
                 npcs.getContent(),
@@ -38,11 +36,12 @@ public class NpcServiceImpl implements Npcservice{
 
     @Override
     public Npc findById(Integer id) {
-        return npcRepository.findById(id).orElse(null);
+        return null;
     }
 
     @Override
     public Npc findByName(String name) {
-        return NpcFactory.createNpc();
+        return null;
     }
+
 }

@@ -1,4 +1,4 @@
-package entity.response;
+package SKYROM.com.example.SKYROM.entity.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

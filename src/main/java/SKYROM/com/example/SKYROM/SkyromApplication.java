@@ -1,11 +1,11 @@
 package SKYROM.com.example.SKYROM;
 
-import entity.DTO.Npc;
+import SKYROM.com.example.SKYROM.entity.DTO.Npc;
+import SKYROM.com.example.SKYROM.utils.NpcFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import utils.NpcFactory;
 
 import java.util.ArrayList;
 
